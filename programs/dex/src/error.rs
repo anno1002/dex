@@ -8,4 +8,13 @@ pub enum ErrorCode {
     InvalidSwapFeeRate,
     #[msg("Invalid protocol fee rate")]
     InvalidProtocolFeeRate,
+    #[msg("protocol ispaused")]
+    Ispaused,
+    #[msg("InvalidMint")]
+    InvalidMint,
+    #[msg("InvalidAmount")]
+    InvalidAmount,
+    #[msg("InsufficientBalance")]
+    InsufficientBalance,
+
 }

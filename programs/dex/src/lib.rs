@@ -56,4 +56,15 @@ pub mod dex {
             ctx
         )
     }
+
+    pub fn initialize_pool(
+        ctx: Context<InitializePool>,
+        initial_token_x: u64,
+        initial_token_y: u64
+    ) -> Result<()> {
+        instructions::pool::initialize_pool(ctx, initial_token_x, initial_token_y);
+        Ok(())
+    }
 }
+
+

@@ -25,7 +25,7 @@ pub struct InitializeConfig <'info>{
     pub payer: Signer<'info>,
     #[account(init, 
         payer = payer, 
-        space = Config_State::SIZE, 
+        space = Config_State::SIZE,
         seeds = [CONFIG_SEED], 
         bump)]
     pub config: Account<'info, Config_State>,
