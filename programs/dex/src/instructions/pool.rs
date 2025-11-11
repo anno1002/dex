@@ -113,7 +113,7 @@ pub fn initialize_pool(
     let cpi_account_x = Transfer{
         from: user_token_x.to_account_info(),
         to: token_x_vault.to_account_info(),
-        authority: user_token_x.to_account_info(),
+        authority: ctx.accounts.payer.to_account_info(),
     };
     let cpi_program = token_program.to_account_info();
     let cpi_context_x = CpiContext::new(cpi_program, cpi_account_x);
@@ -122,7 +122,7 @@ pub fn initialize_pool(
     let cpi_account_y = Transfer{
         from: user_token_y.to_account_info(),
         to: token_y_vault.to_account_info(),
-        authority: user_token_y.to_account_info(),
+        authority: ctx.accounts.payer.to_account_info(),
     };
     let cpi_program = token_program.to_account_info();
     let cpi_context_y = CpiContext::new(cpi_program, cpi_account_y);

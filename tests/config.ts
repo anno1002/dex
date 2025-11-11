@@ -36,6 +36,7 @@ describe("config", () => {
         payer: authorityWallet.publicKey,
         admin: authorityWallet.publicKey,
         protocolFeeAccount: protocolWallet.publicKey,
+        //@ts-ignore
         config: configPDA
       }
     ).
